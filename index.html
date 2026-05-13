@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smiling Sprouts Daycare — A Joyful Place to Grow</title>
+  <meta name="description" content="Smiling Sprouts is a warm, nurturing daycare where every child grows, learns, and plays in a safe, joyful environment." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Smiling Sprouts home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" width="40" height="40">
+            <circle cx="32" cy="32" r="30" fill="#FFD66B"/>
+            <path d="M20 36c3 5 9 8 12 8s9-3 12-8" stroke="#3B4A2A" stroke-width="3" stroke-linecap="round" fill="none"/>
+            <circle cx="24" cy="28" cy="28" r="2.5" fill="#3B4A2A"/>
+            <circle cx="40" cy="28" r="2.5" fill="#3B4A2A"/>
+            <path d="M32 18c-2-6 4-10 8-6-4 2-4 5-3 8-2-1-4-1-5-2z" fill="#74B266"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Smiling Sprouts</span>
+          <span class="brand-tag">Daycare &amp; Learning</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">
+          <span></span><span></span><span></span>
+          <span class="sr-only">Menu</span>
+        </button>
+        <ul id="primary-menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#schedule">Daily Schedule</a></li>
+          <li><a href="#gallery">Our Space</a></li>
+          <li><a href="#why">Why Us</a></li>
+          <li><a href="#contact" class="btn btn-pill btn-small">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Now Enrolling — Limited Spots</span>
+        <h1>A joyful place where little ones <span class="accent">grow, play, and bloom</span>.</h1>
+        <p class="lead">
+          At Smiling Sprouts, we provide a warm, safe, and nurturing home-away-from-home for your child.
+          Our caring teachers, playful curriculum, and bright learning spaces help every sprout thrive.
+        </p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">Schedule a Visit</a>
+          <a href="#programs" class="btn btn-ghost">Explore Programs</a>
+        </div>
+        <ul class="hero-trust">
+          <li><strong>Licensed</strong><span>&amp; Insured</span></li>
+          <li><strong>Small</strong><span>Group Sizes</span></li>
+          <li><strong>Healthy</strong><span>Meals &amp; Snacks</span></li>
+        </ul>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="hero-image">
+          <!-- Replace with your hero image -->
+          <img src="images/hero-playroom.jpg" alt="Bright, welcoming Smiling Sprouts playroom" onerror="this.style.display='none'"/>
+          <div class="image-placeholder">Add hero image as<br/><code>images/hero-playroom.jpg</code></div>
+        </div>
+        <div class="floating-badge badge-stars">
+          <span aria-hidden="true">★★★★★</span>
+          <small>Loved by Local Families</small>
+        </div>
+        <div class="floating-badge badge-ages">
+          <strong>Ages 1 – 5</strong>
+          <small>Toddler &amp; Preschool</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature Strip -->
+  <section class="feature-strip">
+    <div class="container feature-grid">
+      <div class="feature">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5.5-7 10-7 10-1 .5-3 .5-4 0z" fill="#E26A6A"/></svg>
+        </div>
+        <h3>Warm &amp; Loving Care</h3>
+        <p>Every child is greeted with a smile and treated like family.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z" fill="#74B266"/></svg>
+        </div>
+        <h3>A Safe Home Setting</h3>
+        <p>Clean, secure, and child-proofed spaces designed for little explorers.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16v14H6l-2 2z" fill="#5BA8D6"/></svg>
+        </div>
+        <h3>Play-Based Learning</h3>
+        <p>A curriculum that builds confidence, creativity, and curiosity.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.5 6.5L21 9l-5 4 1.5 7L12 16.8 6.5 20 8 13 3 9l6.5-.5z" fill="#F2A93B"/></svg>
+        </div>
+        <h3>Experienced Educators</h3>
+        <p>Trained, certified, and passionate about early childhood development.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container two-col">
+      <div class="col-art">
+        <div class="about-image">
+          <img src="images/about.jpg" alt="Children playing happily" onerror="this.style.display='none'"/>
+          <div class="image-placeholder small">Add <code>images/about.jpg</code></div>
+        </div>
+      </div>
+      <div class="col-copy">
+        <span class="eyebrow">About Smiling Sprouts</span>
+        <h2>Where every child blooms at their own pace.</h2>
+        <p>
+          Smiling Sprouts was founded with a simple belief: children thrive when they feel safe,
+          seen, and celebrated. Our home-based daycare blends the comfort of a cozy home with
+          the structure of an enriching learning environment.
+        </p>
+        <p>
+          From morning circle time to creative play, every part of our day is thoughtfully
+          designed to support social, emotional, physical, and cognitive growth.
+        </p>
+        <ul class="check-list">
+          <li>Nurturing, low-ratio classroom</li>
+          <li>Daily activities that build curiosity</li>
+          <li>Open communication with parents</li>
+          <li>Healthy meals &amp; snack options</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs -->
+  <section class="section section-soft" id="programs">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Our Programs</span>
+        <h2>Programs designed for every stage of early childhood.</h2>
+        <p class="section-sub">Each program is crafted around the developmental needs and interests of its age group, with plenty of play, learning, and laughter built into every day.</p>
+      </div>
+
+      <div class="program-grid">
+        <article class="program-card">
+          <div class="program-emoji" aria-hidden="true">🧸</div>
+          <h3>Toddlers</h3>
+          <p class="age">Ages 1 – 2</p>
+          <p>Gentle routines, sensory play, and language-building activities to support our youngest sprouts.</p>
+        </article>
+        <article class="program-card highlight">
+          <div class="program-emoji" aria-hidden="true">🎨</div>
+          <h3>Preschool</h3>
+          <p class="age">Ages 3 – 4</p>
+          <p>Creative arts, early literacy, and social play that prepare children for the next big step.</p>
+        </article>
+        <article class="program-card">
+          <div class="program-emoji" aria-hidden="true">📚</div>
+          <h3>Pre-Kindergarten</h3>
+          <p class="age">Ages 4 – 5</p>
+          <p>Kindergarten readiness with letters, numbers, problem solving, and confidence-building routines.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Daily Schedule -->
+  <section class="section" id="schedule">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">A Day at Smiling Sprouts</span>
+        <h2>Daily Schedule</h2>
+        <p class="section-sub">A structured yet flexible day designed to balance learning, play, and rest so your child feels happy and secure.</p>
+      </div>
+
+      <ol class="schedule">
+        <li>
+          <div class="sched-time"><span class="clock" aria-hidden="true">🕘</span>9:00 – 10:00 AM</div>
+          <div class="sched-body">
+            <h4>Drop-off &amp; Free Playtime</h4>
+            <p>A warm welcome and gentle transition with toys and friends.</p>
+          </div>
+        </li>
+        <li>
+          <div class="sched-time"><span class="clock" aria-hidden="true">🕙</span>10:00 – 11:00 AM</div>
+          <div class="sched-body">
+            <h4>Circle Time</h4>
+            <p>Songs, calendar, weather, and a guided learning theme of the day.</p>
+          </div>
+        </li>
+        <li>
+          <div class="sched-time"><span class="clock" aria-hidden="true">🕚</span>11:00 – 11:30 AM</div>
+          <div class="sched-body">
+            <h4>Motor Skills Activity</h4>
+            <p>Movement games and exercises to build coordination and strength.</p>
+          </div>
+        </li>
+        <li>
+          <div class="sched-time"><span class="clock" aria-hidden="true">🕦</span>11:30 AM – 12:00 PM</div>
+          <div class="sched-body">
+            <h4>Book Reading &amp; Dancing Time</h4>
+            <p>Storytime adventures followed by joyful music and movement.</p>
+          </div>
+        </li>
+        <li>
+          <div class="sched-time"><span class="clock" aria-hidden="true">🕛</span>12:00 – 1:00 PM</div>
+          <div class="sched-body">
+            <h4>Lunch Time</h4>
+            <p>A healthy, balanced meal shared together at the table.</p>
+          </div>
+        </li>
+        <li>
+          <div class="sched-time"><span class="clock" aria-hidden="true">🕐</span>1:00 – 3:00 PM</div>
+          <div class="sched-body">
+            <h4>Nap Time</h4>
+            <p>Quiet, cozy rest to recharge little bodies and minds.</p>
+          </div>
+        </li>
+        <li>
+          <div class="sched-time"><span class="clock" aria-hidden="true">🕒</span>3:00 – 4:00 PM</div>
+          <div class="sched-body">
+            <h4>Snack Time</h4>
+            <p>A wholesome snack and friendly conversation.</p>
+          </div>
+        </li>
+        <li>
+          <div class="sched-time"><span class="clock" aria-hidden="true">🕓</span>4:00 – 5:00 PM</div>
+          <div class="sched-body">
+            <h4>Free Playtime &amp; Pickup</h4>
+            <p>Open play and a happy goodbye to family at the door.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section section-soft" id="gallery">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Take a Peek Inside</span>
+        <h2>What Our Daycare Looks Like</h2>
+        <p class="section-sub">Bright, colorful, and thoughtfully arranged — every corner is designed with children in mind.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <img src="images/space-1.jpg" alt="Play mats and learning toys in the main room" onerror="this.style.display='none'"/>
+          <div class="image-placeholder">Add <code>images/space-1.jpg</code></div>
+          <figcaption>Sensory Play Mats</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/space-2.jpg" alt="Main play area with table, chairs and rugs" onerror="this.style.display='none'"/>
+          <div class="image-placeholder">Add <code>images/space-2.jpg</code></div>
+          <figcaption>Main Play Area</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/space-3.jpg" alt="Activity corner with toy tracks and craft table" onerror="this.style.display='none'"/>
+          <div class="image-placeholder">Add <code>images/space-3.jpg</code></div>
+          <figcaption>Activity Corner</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/space-4.jpg" alt="Quiet reading nook with rug and storage" onerror="this.style.display='none'"/>
+          <div class="image-placeholder">Add <code>images/space-4.jpg</code></div>
+          <figcaption>Quiet Reading Nook</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section class="section" id="why">
+    <div class="container two-col reverse">
+      <div class="col-copy">
+        <span class="eyebrow">Why Families Choose Us</span>
+        <h2>Peace of mind for parents. A joyful day for kids.</h2>
+        <p>We know choosing a daycare is one of the biggest decisions a family can make. Here's what makes Smiling Sprouts special:</p>
+        <div class="why-grid">
+          <div class="why-item">
+            <h4>👩‍🏫 Loving Caregivers</h4>
+            <p>Caring, trained staff who treat every child like their own.</p>
+          </div>
+          <div class="why-item">
+            <h4>🏡 Cozy Home Setting</h4>
+            <p>A clean, welcoming environment that feels just like home.</p>
+          </div>
+          <div class="why-item">
+            <h4>🧩 Engaging Curriculum</h4>
+            <p>Play-based learning that grows with your child.</p>
+          </div>
+          <div class="why-item">
+            <h4>🥕 Healthy Meals</h4>
+            <p>Nutritious meals and snacks prepared with care.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-art">
+        <div class="quote-card">
+          <p>“Smiling Sprouts feels like a second home for our daughter. She runs in every morning with the biggest smile — that says everything.”</p>
+          <footer>— A Smiling Sprouts Parent</footer>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / Contact -->
+  <section class="cta" id="contact">
+    <div class="container cta-grid">
+      <div>
+        <span class="eyebrow light">Get In Touch</span>
+        <h2>Come visit Smiling Sprouts.</h2>
+        <p>We'd love to show you around and answer your questions. Schedule a tour or reach out anytime — we're here for your family.</p>
+        <ul class="contact-info">
+          <li><strong>📞 Phone:</strong> <a href="tel:+10000000000">(000) 000-0000</a></li>
+          <li><strong>✉️ Email:</strong> <a href="mailto:hello@smilingsprouts.com">hello@smilingsprouts.com</a></li>
+          <li><strong>📍 Address:</strong> Your Street, Your City</li>
+          <li><strong>🕘 Hours:</strong> Monday – Friday, 9:00 AM – 5:00 PM</li>
+        </ul>
+      </div>
+
+      <form class="contact-form" onsubmit="event.preventDefault(); this.querySelector('.form-success').hidden=false; this.reset();">
+        <h3>Request a Tour</h3>
+        <label>
+          <span>Parent Name</span>
+          <input type="text" name="name" required placeholder="Your full name" />
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" required placeholder="you@example.com" />
+        </label>
+        <label>
+          <span>Phone</span>
+          <input type="tel" name="phone" placeholder="(000) 000-0000" />
+        </label>
+        <label>
+          <span>Child's Age</span>
+          <select name="age" required>
+            <option value="">Select an age</option>
+            <option>Under 1</option>
+            <option>1 – 2 years</option>
+            <option>3 – 4 years</option>
+            <option>4 – 5 years</option>
+          </select>
+        </label>
+        <label class="full">
+          <span>Message</span>
+          <textarea name="message" rows="3" placeholder="Tell us a little about your family"></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary full">Request a Tour</button>
+        <p class="form-success" hidden>Thank you! We'll be in touch within one business day. 💛</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand">
+          <span class="brand-text">
+            <span class="brand-name">Smiling Sprouts</span>
+            <span class="brand-tag">Daycare &amp; Learning</span>
+          </span>
+        </div>
+        <p class="muted">A warm, nurturing daycare where every child grows, learns, and plays.</p>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#schedule">Daily Schedule</a></li>
+          <li><a href="#gallery">Our Space</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Visit</h5>
+        <ul>
+          <li>Mon – Fri</li>
+          <li>9:00 AM – 5:00 PM</li>
+          <li>Your Street, Your City</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:+10000000000">(000) 000-0000</a></li>
+          <li><a href="mailto:hello@smilingsprouts.com">hello@smilingsprouts.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <small>© <span id="year"></span> Smiling Sprouts Daycare. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
