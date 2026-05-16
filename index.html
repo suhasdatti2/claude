@@ -1,958 +1,1597 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Smiling Sprouts Daycare — A Joyful Place to Grow</title>
-  <meta name="description" content="Smiling Sprouts is a warm, nurturing daycare where every child grows, learns, and plays in a safe, joyful environment." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    /* ---------- Smiling Sprouts — Stylesheet ---------- */
-    :root {
-      --green-900: #2e3d20;
-      --green-700: #4f7a3a;
-      --green-500: #74b266;
-      --green-100: #e8f3df;
-      --yellow-500: #f4c542;
-      --yellow-300: #ffd66b;
-      --peach-500: #f6a26b;
-      --pink-500: #f1799a;
-      --blue-500: #5ba8d6;
-      --cream:   #fffaf2;
-      --cream-2: #fdf4e3;
-      --text:    #2b2f24;
-      --muted:   #6b6f5e;
-      --border:  #ece7d8;
-      --shadow:  0 14px 40px rgba(48, 60, 30, 0.10);
-      --shadow-sm: 0 4px 18px rgba(48, 60, 30, 0.08);
-      --radius:  18px;
-      --radius-lg: 28px;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: 'Nunito', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-      color: var(--text);
-      background: var(--cream);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-    h1, h2, h3, h4, h5 {
-      font-family: 'Fraunces', Georgia, serif;
-      color: var(--green-900);
-      line-height: 1.15;
-      margin: 0 0 .5em;
-      font-weight: 600;
-    }
-    h1 { font-size: clamp(2.1rem, 4.5vw, 3.4rem); letter-spacing: -.5px; }
-    h2 { font-size: clamp(1.7rem, 3.2vw, 2.4rem); letter-spacing: -.3px; }
-    h3 { font-size: 1.2rem; }
-    h4 { font-size: 1.05rem; }
-    p { margin: 0 0 1em; }
-    a { color: var(--green-700); text-decoration: none; }
-    a:hover { color: var(--green-900); }
-    img { max-width: 100%; display: block; }
-    .container { width: min(1180px, 92%); margin-inline: auto; }
-    .sr-only {
-      position:absolute; width:1px; height:1px; padding:0; margin:-1px;
-      overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
-    }
-    .eyebrow {
-      display: inline-block;
-      background: var(--green-100);
-      color: var(--green-700);
-      font-weight: 700;
-      font-size: .75rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      padding: .35rem .8rem;
-      border-radius: 999px;
-      margin-bottom: 1rem;
-    }
-    .eyebrow.light { background: rgba(255,255,255,.2); color: #fff; }
-    .accent { color: var(--green-700); }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Duke's Seafood Bellevue — Lincoln Square | Sustainable Wild Seafood</title>
+<meta name="description" content="Duke's Seafood Bellevue at Lincoln Square. 100% sustainable wild seafood, award-winning chowder, grass-fed burgers, oysters, and an unforgettable happy hour in downtown Bellevue." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --navy: #0a1f33;
+    --navy-deep: #061321;
+    --gold: #c9a96e;
+    --gold-soft: #e3c98f;
+    --cream: #f7f1e6;
+    --cream-warm: #efe6d3;
+    --ink: #1a1a1a;
+    --muted: #6b6b6b;
+    --coral: #d96a5b;
+    --sea: #2d6a7a;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Inter', system-ui, sans-serif;
+    --script: 'Caveat', cursive;
+  }
 
-    /* Buttons */
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center;
-      gap: .5rem;
-      padding: .9rem 1.4rem;
-      border-radius: 999px;
-      font-weight: 700;
-      text-decoration: none;
-      font-family: inherit;
-      font-size: 1rem;
-      border: 2px solid transparent;
-      cursor: pointer;
-      transition: transform .15s ease, box-shadow .2s ease, background .2s;
-    }
-    .btn-primary {
-      background: var(--green-700); color: #fff;
-      box-shadow: 0 8px 20px rgba(79,122,58,.35);
-    }
-    .btn-primary:hover { background: var(--green-900); transform: translateY(-2px); color:#fff; }
-    .btn-ghost {
-      background: transparent; color: var(--green-900);
-      border-color: var(--green-700);
-    }
-    .btn-ghost:hover { background: var(--green-100); }
-    .btn-small { padding: .55rem 1.1rem; font-size: .9rem; }
-    .btn.full { width: 100%; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; transition: color .3s; }
 
-    /* Header / Nav */
-    .site-header {
-      position: sticky; top: 0; z-index: 50;
-      background: rgba(255, 250, 242, .9);
-      backdrop-filter: saturate(160%) blur(10px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-wrap {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: .8rem 0;
-    }
-    .brand {
-      display: flex; align-items: center; gap: .7rem;
-      color: var(--green-900); font-weight: 700;
-    }
-    .brand-mark {
-      width: 44px; height: 44px;
-      display: grid; place-items: center;
-      background: #fff; border-radius: 14px;
-      box-shadow: var(--shadow-sm);
-    }
-    .brand-text { display: flex; flex-direction: column; line-height: 1; }
-    .brand-name { font-family: 'Fraunces', serif; font-size: 1.25rem; }
-    .brand-tag  { font-size: .72rem; color: var(--muted); letter-spacing: .1em; text-transform: uppercase; margin-top: 3px; }
-    .site-nav ul {
-      list-style: none; display: flex; gap: 1.4rem; margin: 0; padding: 0; align-items: center;
-    }
-    .site-nav a {
-      color: var(--text); font-weight: 600; font-size: .95rem;
-    }
-    .site-nav a:hover { color: var(--green-700); }
-    .nav-toggle {
-      display: none;
-      flex-direction: column; gap: 4px;
-      background: transparent; border: 0; cursor: pointer; padding: .4rem;
-    }
-    .nav-toggle span {
-      width: 24px; height: 2.5px; background: var(--green-900); border-radius: 2px;
-    }
+  /* ---------- TOP STRIP ---------- */
+  .top-strip {
+    background: var(--navy-deep);
+    color: var(--gold-soft);
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 8px 16px;
+    font-weight: 500;
+  }
+  .top-strip span { margin: 0 14px; opacity: .9; }
+  .top-strip a:hover { color: #fff; }
 
-    /* Hero */
-    .hero {
-      position: relative;
-      padding: clamp(2.5rem, 6vw, 5rem) 0 clamp(3rem, 7vw, 6rem);
-      overflow: hidden;
-      background:
-        radial-gradient(900px 600px at 90% -10%, rgba(255, 214, 107, .35), transparent 60%),
-        radial-gradient(700px 500px at -10% 110%, rgba(116, 178, 102, .25), transparent 60%),
-        var(--cream);
-    }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: clamp(2rem, 5vw, 4rem);
-      align-items: center;
-    }
-    .hero-copy .lead {
-      font-size: 1.1rem; color: var(--muted); max-width: 48ch;
-    }
-    .hero-cta { display: flex; gap: .8rem; flex-wrap: wrap; margin: 1.5rem 0 2rem; }
-    .hero-trust {
-      list-style: none; padding: 0; margin: 0;
-      display: flex; gap: 2rem; flex-wrap: wrap;
-    }
-    .hero-trust li { display: flex; flex-direction: column; line-height: 1.2; }
-    .hero-trust strong { font-family: 'Fraunces', serif; font-size: 1.4rem; color: var(--green-900); }
-    .hero-trust span { color: var(--muted); font-size: .9rem; }
-    .hero-art {
-      position: relative;
-      aspect-ratio: 4/4.4;
-    }
-    .hero-image {
-      position: absolute; inset: 0;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      background: linear-gradient(135deg, #ffe8b6 0%, #ffd2c1 50%, #d8eecc 100%);
-    }
-    .hero-image img { width: 100%; height: 100%; object-fit: cover; }
-    .blob {
-      position: absolute; border-radius: 50%; filter: blur(2px); z-index: -1;
-    }
-    .blob-1 { width: 220px; height: 220px; background: var(--yellow-300); top: -40px; right: -30px; opacity: .55; }
-    .blob-2 { width: 180px; height: 180px; background: var(--green-500); bottom: -40px; left: -30px; opacity: .45; }
-    .floating-badge {
-      position: absolute;
-      background: #fff;
-      padding: .8rem 1.1rem;
-      border-radius: 16px;
-      box-shadow: var(--shadow);
+  /* ---------- NAV ---------- */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(10,31,51,.08);
+    transition: all .35s ease;
+  }
+  nav.scrolled {
+    background: rgba(10,31,51,.96);
+    border-bottom-color: rgba(201,169,110,.25);
+  }
+  nav.scrolled .nav-inner a,
+  nav.scrolled .logo { color: var(--cream); }
+  nav.scrolled .logo span { color: var(--gold-soft); }
+
+  .nav-inner {
+    max-width: 1400px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 32px;
+  }
+  .logo {
+    font-family: var(--serif);
+    font-size: 26px; font-weight: 600;
+    color: var(--navy); letter-spacing: 1px;
+    display: flex; align-items: baseline; gap: 8px;
+  }
+  .logo span {
+    font-family: var(--script);
+    font-size: 22px; color: var(--gold);
+    font-weight: 500;
+  }
+  .nav-links {
+    display: flex; gap: 32px; align-items: center;
+    list-style: none;
+    font-size: 13px; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 1.5px;
+  }
+  .nav-links a { position: relative; padding: 6px 0; }
+  .nav-links a::after {
+    content: ''; position: absolute; left: 0; bottom: 0;
+    width: 0; height: 1px; background: var(--gold);
+    transition: width .3s ease;
+  }
+  .nav-links a:hover::after { width: 100%; }
+  .btn-reserve {
+    background: var(--gold); color: var(--navy) !important;
+    padding: 10px 22px !important; border-radius: 2px;
+    font-weight: 600 !important;
+  }
+  .btn-reserve:hover { background: var(--gold-soft); }
+  .btn-reserve::after { display: none !important; }
+
+  .nav-toggle { display: none; background: none; border: none; cursor: pointer; font-size: 22px; color: var(--navy); }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    background:
+      radial-gradient(ellipse at top, rgba(10,31,51,.45), rgba(6,19,33,.85)),
+      url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1920&q=80') center/cover;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 60%, var(--cream) 100%);
+    pointer-events: none;
+  }
+  .hero-inner { position: relative; z-index: 2; max-width: 1100px; padding: 0 24px; }
+  .hero-eyebrow {
+    font-family: var(--script);
+    font-size: clamp(24px, 3vw, 36px);
+    color: var(--gold-soft);
+    margin-bottom: 12px;
+    animation: fadeUp 1s ease .2s both;
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(48px, 8vw, 110px);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -1px;
+    margin-bottom: 30px;
+    animation: fadeUp 1s ease .4s both;
+  }
+  .hero h1 em {
+    font-style: italic; color: var(--gold-soft); font-weight: 400;
+  }
+
+  /* fading rotating words */
+  .rotator {
+    display: inline-block;
+    position: relative;
+    color: var(--gold-soft);
+    font-style: italic;
+    font-weight: 400;
+    min-height: 1.05em;
+    vertical-align: bottom;
+  }
+  .rotator .word {
+    position: absolute; left: 50%; top: 0;
+    transform: translateX(-50%) translateY(20px);
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  .rotator .word.active {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  .rotator-spacer { visibility: hidden; white-space: nowrap; }
+
+  .hero-sub {
+    font-size: clamp(15px, 1.5vw, 18px);
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    max-width: 680px; margin: 0 auto 40px;
+    opacity: .9;
+    animation: fadeUp 1s ease .6s both;
+  }
+  .hero-cta {
+    display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+    animation: fadeUp 1s ease .8s both;
+  }
+  .btn {
+    display: inline-block;
+    padding: 16px 36px;
+    font-size: 12px; font-weight: 600;
+    letter-spacing: 2.5px; text-transform: uppercase;
+    border: 1px solid var(--gold);
+    background: transparent; color: #fff;
+    cursor: pointer;
+    transition: all .35s ease;
+    position: relative; overflow: hidden;
+  }
+  .btn:hover { background: var(--gold); color: var(--navy); transform: translateY(-2px); }
+  .btn.primary { background: var(--gold); color: var(--navy); }
+  .btn.primary:hover { background: #fff; border-color: #fff; }
+
+  .scroll-hint {
+    position: absolute; bottom: 80px; left: 50%; transform: translateX(-50%);
+    color: var(--gold-soft); font-size: 11px; letter-spacing: 4px;
+    text-transform: uppercase; opacity: .8;
+    animation: bob 2.5s ease-in-out infinite;
+  }
+  @keyframes bob {
+    0%,100% { transform: translateX(-50%) translateY(0); opacity: .8; }
+    50% { transform: translateX(-50%) translateY(8px); opacity: 1; }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ---------- SECTION BASE ---------- */
+  section { padding: 110px 24px; }
+  .container { max-width: 1200px; margin: 0 auto; }
+  .eyebrow {
+    font-family: var(--script);
+    font-size: 28px;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 500;
+    line-height: 1.05;
+    color: var(--navy);
+    margin-bottom: 24px;
+    letter-spacing: -.5px;
+  }
+  .section-title em { font-style: italic; color: var(--gold); }
+  .section-intro {
+    max-width: 720px;
+    font-size: 17px; color: var(--muted);
+    line-height: 1.8;
+    margin-bottom: 60px;
+  }
+  .section-head-center { text-align: center; }
+  .section-head-center .section-intro { margin-left: auto; margin-right: auto; }
+
+  /* ---------- INTRO / STORY ---------- */
+  .story {
+    background: var(--cream);
+    position: relative;
+  }
+  .story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .story-text p {
+    font-size: 17px; color: #3a3a3a;
+    margin-bottom: 18px; line-height: 1.85;
+  }
+  .story-text .lead {
+    font-family: var(--serif);
+    font-size: 26px; font-style: italic;
+    color: var(--navy);
+    margin-bottom: 26px;
+    line-height: 1.4;
+  }
+  .story-image {
+    position: relative;
+    aspect-ratio: 4/5;
+    overflow: hidden;
+    border-radius: 2px;
+    box-shadow: 0 30px 60px -20px rgba(10,31,51,.35);
+  }
+  .story-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 8s ease; }
+  .story-image:hover img { transform: scale(1.08); }
+  .story-image::after {
+    content: '40+'; position: absolute;
+    bottom: -30px; right: -20px;
+    font-family: var(--serif);
+    font-size: 200px; font-weight: 600;
+    color: var(--gold); opacity: .9;
+    line-height: 1;
+  }
+  .story-badge {
+    position: absolute; top: 24px; left: 24px;
+    background: var(--navy); color: var(--gold-soft);
+    padding: 10px 18px; font-size: 11px;
+    letter-spacing: 3px; text-transform: uppercase;
+    border-left: 2px solid var(--gold);
+  }
+
+  /* ---------- MARQUEE ---------- */
+  .marquee {
+    background: var(--navy);
+    color: var(--gold-soft);
+    overflow: hidden;
+    padding: 22px 0;
+    border-top: 1px solid rgba(201,169,110,.15);
+    border-bottom: 1px solid rgba(201,169,110,.15);
+  }
+  .marquee-track {
+    display: flex; gap: 60px;
+    white-space: nowrap;
+    animation: scroll 40s linear infinite;
+    font-family: var(--serif);
+    font-size: 28px;
+    font-style: italic;
+  }
+  .marquee-track span { display: inline-flex; align-items: center; gap: 60px; }
+  .marquee-track .dot { color: var(--gold); font-size: 20px; }
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  /* ---------- VALUES ---------- */
+  .values {
+    background: linear-gradient(180deg, var(--cream) 0%, var(--cream-warm) 100%);
+  }
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+  }
+  .value-card {
+    background: #fff;
+    padding: 40px 28px;
+    text-align: center;
+    border-top: 2px solid var(--gold);
+    transition: transform .4s ease, box-shadow .4s ease;
+  }
+  .value-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -15px rgba(10,31,51,.18);
+  }
+  .value-icon {
+    font-size: 38px; margin-bottom: 18px;
+    color: var(--gold);
+  }
+  .value-card h3 {
+    font-family: var(--serif);
+    font-size: 24px; font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 12px;
+  }
+  .value-card p { color: var(--muted); font-size: 15px; }
+
+  /* ---------- MENUS ---------- */
+  .menus {
+    background: #fff;
+    position: relative;
+  }
+  .menu-tabs {
+    display: flex; justify-content: center;
+    gap: 8px; flex-wrap: wrap;
+    margin-bottom: 60px;
+    border-bottom: 1px solid rgba(10,31,51,.08);
+    padding-bottom: 0;
+  }
+  .menu-tab {
+    background: none; border: none;
+    font-family: var(--sans);
+    font-size: 12px; font-weight: 600;
+    letter-spacing: 2.5px; text-transform: uppercase;
+    color: var(--muted);
+    padding: 18px 24px;
+    cursor: pointer;
+    position: relative;
+    transition: color .3s ease;
+  }
+  .menu-tab::after {
+    content: ''; position: absolute;
+    left: 50%; bottom: -1px;
+    width: 0; height: 2px;
+    background: var(--gold);
+    transition: all .3s ease;
+    transform: translateX(-50%);
+  }
+  .menu-tab:hover { color: var(--navy); }
+  .menu-tab.active { color: var(--navy); }
+  .menu-tab.active::after { width: 60%; }
+
+  .menu-panel { display: none; animation: fadeIn .6s ease; }
+  .menu-panel.active { display: block; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+  .menu-section {
+    margin-bottom: 60px;
+  }
+  .menu-section-title {
+    font-family: var(--serif);
+    font-size: 32px; font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 8px;
+    display: flex; align-items: baseline; gap: 18px;
+  }
+  .menu-section-title::after {
+    content: ''; flex: 1; height: 1px;
+    background: linear-gradient(90deg, var(--gold) 0%, transparent 100%);
+  }
+  .menu-section-sub {
+    color: var(--muted);
+    font-style: italic;
+    margin-bottom: 30px;
+    font-family: var(--serif);
+    font-size: 17px;
+  }
+  .menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 60px;
+  }
+  .menu-item {
+    padding: 18px 0;
+    border-bottom: 1px dashed rgba(10,31,51,.12);
+  }
+  .menu-item-head {
+    display: flex; justify-content: space-between;
+    align-items: baseline; gap: 16px;
+    margin-bottom: 6px;
+  }
+  .menu-item-name {
+    font-family: var(--serif);
+    font-size: 21px; font-weight: 600;
+    color: var(--navy);
+    line-height: 1.3;
+  }
+  .menu-item-name .tag {
+    font-family: var(--sans);
+    font-size: 10px; font-weight: 700;
+    background: var(--gold); color: var(--navy);
+    padding: 2px 7px;
+    margin-left: 8px;
+    letter-spacing: 1px;
+    vertical-align: middle;
+    border-radius: 2px;
+  }
+  .menu-item-price {
+    font-family: var(--serif);
+    font-size: 19px; font-weight: 500;
+    color: var(--gold);
+    white-space: nowrap;
+    letter-spacing: 1px;
+  }
+  .menu-item-desc {
+    font-size: 14px; color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* ---------- POPULAR DISHES ---------- */
+  .popular {
+    background: var(--cream-warm);
+    overflow: hidden;
+  }
+  .dishes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 50px;
+  }
+  .dish {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 3/4;
+    cursor: pointer;
+  }
+  .dish img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 1.2s ease;
+  }
+  .dish:hover img { transform: scale(1.1); }
+  .dish::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 30%, rgba(10,31,51,.92) 100%);
+    z-index: 1;
+  }
+  .dish-info {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    z-index: 2; color: #fff;
+    padding: 32px 28px;
+    transform: translateY(40px);
+    transition: transform .5s ease;
+  }
+  .dish:hover .dish-info { transform: translateY(0); }
+  .dish-tag {
+    font-family: var(--script);
+    color: var(--gold-soft);
+    font-size: 22px;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .dish-name {
+    font-family: var(--serif);
+    font-size: 28px; font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+  .dish-desc {
+    font-size: 14px;
+    opacity: 0; max-height: 0;
+    transition: all .5s ease;
+    color: rgba(255,255,255,.85);
+  }
+  .dish:hover .dish-desc {
+    opacity: 1; max-height: 100px;
+  }
+
+  /* ---------- QUOTE ---------- */
+  .quote {
+    background:
+      linear-gradient(135deg, rgba(10,31,51,.85), rgba(45,106,122,.7)),
+      url('https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=1920&q=80') center/cover fixed;
+    color: #fff;
+    text-align: center;
+    padding: 140px 24px;
+  }
+  .quote blockquote {
+    font-family: var(--serif);
+    font-size: clamp(24px, 3vw, 38px);
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.4;
+    max-width: 950px;
+    margin: 0 auto 30px;
+  }
+  .quote blockquote::before { content: '"'; font-size: 80px; color: var(--gold); display: block; line-height: 0; margin-bottom: 30px; }
+  .quote cite {
+    font-family: var(--sans);
+    font-size: 13px; font-style: normal;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: var(--gold-soft);
+  }
+
+  /* ---------- HOURS / VISIT ---------- */
+  .visit {
+    background: var(--navy);
+    color: var(--cream);
+    padding: 110px 24px;
+  }
+  .visit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .visit .section-title { color: #fff; }
+  .visit .section-title em { color: var(--gold-soft); }
+  .visit-info p { color: rgba(247,241,230,.75); margin-bottom: 14px; font-size: 16px; }
+  .hours-card {
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(201,169,110,.2);
+    padding: 50px;
+  }
+  .hours-row {
+    display: flex; justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(201,169,110,.12);
+    font-size: 15px;
+  }
+  .hours-row:last-child { border-bottom: none; }
+  .hours-row strong {
+    font-family: var(--serif);
+    font-size: 19px;
+    color: var(--gold-soft);
+    font-weight: 500;
+  }
+  .hours-row span { color: rgba(247,241,230,.8); }
+  .hours-title {
+    font-family: var(--serif);
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+  .happy-hour-highlight {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 22px 28px;
+    margin-top: 30px;
+    text-align: center;
+  }
+  .happy-hour-highlight strong {
+    font-family: var(--serif);
+    font-size: 24px;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .happy-hour-highlight span {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  /* ---------- LOCATIONS ---------- */
+  .locations {
+    background: var(--cream);
+  }
+  .loc-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 50px;
+  }
+  .loc {
+    padding: 30px 24px;
+    background: #fff;
+    border-bottom: 2px solid transparent;
+    transition: all .35s ease;
+    cursor: pointer;
+  }
+  .loc:hover {
+    border-bottom-color: var(--gold);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -15px rgba(10,31,51,.15);
+  }
+  .loc.featured {
+    background: var(--navy);
+    color: #fff;
+    border-bottom-color: var(--gold);
+  }
+  .loc.featured .loc-city { color: var(--gold-soft); }
+  .loc.featured .loc-detail { color: rgba(247,241,230,.7); }
+  .loc-tag {
+    font-family: var(--script);
+    color: var(--gold);
+    font-size: 18px;
+    display: block;
+    margin-bottom: 6px;
+  }
+  .loc-city {
+    font-family: var(--serif);
+    font-size: 24px; font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+  .loc-detail {
+    font-size: 13px; color: var(--muted);
+  }
+
+  /* ---------- CTA STRIP ---------- */
+  .cta-strip {
+    background: var(--gold);
+    color: var(--navy);
+    text-align: center;
+    padding: 80px 24px;
+  }
+  .cta-strip h2 {
+    font-family: var(--serif);
+    font-size: clamp(34px, 5vw, 56px);
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+  .cta-strip p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    font-size: 17px;
+  }
+  .cta-strip .btn {
+    border-color: var(--navy);
+    background: var(--navy);
+    color: var(--gold-soft);
+  }
+  .cta-strip .btn:hover {
+    background: transparent;
+    color: var(--navy);
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    background: var(--navy-deep);
+    color: rgba(247,241,230,.7);
+    padding: 80px 24px 30px;
+  }
+  .foot-grid {
+    max-width: 1200px; margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid rgba(201,169,110,.15);
+  }
+  .foot-logo {
+    font-family: var(--serif);
+    font-size: 32px; font-weight: 600;
+    color: var(--cream);
+    margin-bottom: 16px;
+  }
+  .foot-logo span {
+    font-family: var(--script);
+    color: var(--gold);
+    font-size: 24px;
+    font-weight: 500;
+  }
+  .foot p { font-size: 14px; line-height: 1.8; margin-bottom: 8px; }
+  .foot h4 {
+    font-family: var(--serif);
+    font-size: 18px;
+    color: var(--gold-soft);
+    margin-bottom: 18px;
+    font-weight: 500;
+  }
+  .foot ul { list-style: none; }
+  .foot ul li { margin-bottom: 10px; font-size: 14px; }
+  .foot ul a:hover { color: var(--gold-soft); }
+  .copyright {
+    max-width: 1200px; margin: 30px auto 0;
+    font-size: 12px; color: rgba(247,241,230,.45);
+    text-align: center;
+    letter-spacing: 1px;
+  }
+
+  /* ---------- REVEAL ANIMATIONS ---------- */
+  .reveal { opacity: 0; transform: translateY(40px); transition: opacity 1s ease, transform 1s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: .15s; }
+  .reveal-delay-2 { transition-delay: .3s; }
+  .reveal-delay-3 { transition-delay: .45s; }
+
+  /* fading words anywhere */
+  .fade-words .fw {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity .8s ease, transform .8s ease;
+    margin-right: .25em;
+  }
+  .fade-words.in .fw { opacity: 1; transform: translateY(0); }
+  .fade-words.in .fw:nth-child(1) { transition-delay: .1s; }
+  .fade-words.in .fw:nth-child(2) { transition-delay: .25s; }
+  .fade-words.in .fw:nth-child(3) { transition-delay: .4s; }
+  .fade-words.in .fw:nth-child(4) { transition-delay: .55s; }
+  .fade-words.in .fw:nth-child(5) { transition-delay: .7s; }
+  .fade-words.in .fw:nth-child(6) { transition-delay: .85s; }
+  .fade-words.in .fw:nth-child(7) { transition-delay: 1s; }
+  .fade-words.in .fw:nth-child(8) { transition-delay: 1.15s; }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 960px) {
+    .nav-links { display: none; }
+    .nav-toggle { display: block; }
+    .nav-links.open {
       display: flex; flex-direction: column;
-      line-height: 1.2;
-      font-weight: 700;
+      position: absolute; top: 100%; left: 0; right: 0;
+      background: #fff; padding: 24px;
+      gap: 18px; border-top: 1px solid rgba(10,31,51,.08);
     }
-    .floating-badge small { color: var(--muted); font-weight: 500; font-size: .75rem; margin-top: 2px; letter-spacing: .04em; }
-    .badge-stars { top: 8%; left: -14px; color: var(--yellow-500); }
-    .badge-stars span { font-size: 1.1rem; }
-    .badge-ages { bottom: 8%; right: -14px; color: var(--green-700); }
-    .badge-ages strong { font-family: 'Fraunces', serif; font-size: 1.15rem; }
-
-    /* Image placeholders */
-    .image-placeholder {
-      position: absolute; inset: 0;
-      display: grid; place-items: center; text-align: center;
-      padding: 1rem;
-      color: var(--green-900);
-      font-weight: 600;
-      background: repeating-linear-gradient(
-        45deg, rgba(255,255,255,.5), rgba(255,255,255,.5) 10px,
-        rgba(255,255,255,.2) 10px, rgba(255,255,255,.2) 20px
-      );
-      pointer-events: none;
-    }
-    .image-placeholder code {
-      background: rgba(255,255,255,.7); padding: 2px 6px; border-radius: 6px; font-size: .85rem;
-    }
-    .image-placeholder.small { font-size: .9rem; }
-    img + .image-placeholder { z-index: 0; }
-    .hero-image img, .about-image img, .gallery-item img { position: relative; z-index: 1; }
-
-    /* Feature Strip */
-    .feature-strip {
-      padding: 2rem 0;
-      background: var(--cream-2);
-      border-block: 1px solid var(--border);
-    }
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-    }
-    .feature {
-      text-align: left;
-      background: #fff;
-      border-radius: var(--radius);
-      padding: 1.4rem 1.3rem;
-      box-shadow: var(--shadow-sm);
-    }
-    .feature h3 { margin: .8rem 0 .3rem; font-size: 1.08rem; }
-    .feature p { margin: 0; color: var(--muted); font-size: .95rem; }
-    .feature-icon {
-      width: 48px; height: 48px; border-radius: 14px;
-      background: var(--green-100); display: grid; place-items: center;
-    }
-    .feature-icon svg { width: 26px; height: 26px; }
-
-    /* Sections */
-    .section { padding: clamp(3rem, 7vw, 6rem) 0; }
-    .section-soft { background: var(--cream-2); }
-    .section-head { max-width: 720px; margin-bottom: 2.5rem; }
-    .section-head.center { margin-inline: auto; text-align: center; }
-    .section-sub { color: var(--muted); font-size: 1.05rem; }
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1.05fr;
-      gap: clamp(2rem, 5vw, 4rem);
-      align-items: center;
-    }
-    .two-col.reverse .col-art { order: 2; }
-    .about-image {
-      position: relative;
-      aspect-ratio: 4/3.4;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      background: linear-gradient(135deg, #ffe1c3, #d8eecc);
-    }
-    .about-image img { width: 100%; height: 100%; object-fit: cover; }
-    .check-list { list-style: none; padding: 0; margin: 1rem 0 0; }
-    .check-list li {
-      position: relative; padding-left: 2rem; margin: .55rem 0;
-      font-weight: 600;
-    }
-    .check-list li::before {
-      content: "✓"; position: absolute; left: 0; top: 0;
-      width: 22px; height: 22px; border-radius: 50%;
-      background: var(--green-500); color: #fff;
-      display: grid; place-items: center;
-      font-size: .8rem;
-    }
-
-    /* Programs */
-    .program-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
-    .program-card {
-      background: #fff;
-      border-radius: var(--radius-lg);
-      padding: 2rem 1.6rem;
-      text-align: center;
-      box-shadow: var(--shadow-sm);
-      border: 2px solid transparent;
-      transition: transform .2s ease, box-shadow .25s ease;
-    }
-    .program-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-    .program-card.highlight {
-      background: linear-gradient(180deg, #fff7e2 0%, #fff 70%);
-      border-color: var(--yellow-300);
-    }
-    .program-emoji { font-size: 2.4rem; margin-bottom: .5rem; }
-    .program-card .age {
-      display: inline-block;
-      background: var(--green-100); color: var(--green-700);
-      padding: .2rem .7rem; border-radius: 999px;
-      font-size: .8rem; font-weight: 700; margin: 0 0 .8rem;
-    }
-
-    /* Schedule */
-    .schedule {
-      list-style: none; padding: 0; margin: 0;
-      display: grid; gap: .9rem;
-      max-width: 900px; margin-inline: auto;
-    }
-    .schedule li {
-      display: grid;
-      grid-template-columns: 220px 1fr;
-      gap: 1.5rem;
-      align-items: center;
-      background: #fff;
-      border-radius: var(--radius);
-      padding: 1.1rem 1.4rem;
-      box-shadow: var(--shadow-sm);
-      border-left: 6px solid var(--green-500);
-      transition: transform .15s ease;
-    }
-    .schedule li:hover { transform: translateX(4px); }
-    .schedule li:nth-child(2) { border-left-color: var(--yellow-500); }
-    .schedule li:nth-child(3) { border-left-color: var(--peach-500); }
-    .schedule li:nth-child(4) { border-left-color: var(--pink-500); }
-    .schedule li:nth-child(5) { border-left-color: var(--blue-500); }
-    .schedule li:nth-child(6) { border-left-color: #9b86d3; }
-    .schedule li:nth-child(7) { border-left-color: var(--peach-500); }
-    .schedule li:nth-child(8) { border-left-color: var(--green-700); }
-    .sched-time {
-      display: flex; align-items: center; gap: .6rem;
-      font-weight: 700; color: var(--green-900);
-      font-size: 1rem;
-    }
-    .sched-time .clock { font-size: 1.3rem; }
-    .sched-body h4 { margin: 0 0 .15rem; }
-    .sched-body p  { margin: 0; color: var(--muted); font-size: .95rem; }
-
-    /* Gallery */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
-    }
-    .gallery-item {
-      position: relative;
-      margin: 0;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      background: linear-gradient(135deg, #ffe1c3, #d8eecc);
-      aspect-ratio: 4/3;
-      box-shadow: var(--shadow);
-      transition: transform .25s ease;
-    }
-    .gallery-item:hover { transform: translateY(-4px); }
-    .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
-    .gallery-item figcaption {
-      position: absolute; left: 0; right: 0; bottom: 0;
-      padding: 1rem 1.2rem;
-      background: linear-gradient(transparent, rgba(46,61,32,.85));
-      color: #fff;
-      font-weight: 700;
-      font-family: 'Fraunces', serif;
-      font-size: 1.1rem;
-      z-index: 2;
-    }
-
-    /* Why Us */
-    .why-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin-top: 1.3rem;
-    }
-    .why-item {
-      background: #fff;
-      border-radius: var(--radius);
-      padding: 1rem 1.1rem;
-      box-shadow: var(--shadow-sm);
-    }
-    .why-item h4 { margin: 0 0 .2rem; font-size: 1rem; }
-    .why-item p  { margin: 0; color: var(--muted); font-size: .9rem; }
-    .quote-card {
-      background: linear-gradient(135deg, var(--green-700), var(--green-900));
-      color: #fff;
-      border-radius: var(--radius-lg);
-      padding: 2.2rem;
-      position: relative;
-      box-shadow: var(--shadow);
-    }
-    .quote-card::before {
-      content: "“";
-      position: absolute; top: 4px; left: 18px;
-      font-family: 'Fraunces', serif;
-      font-size: 6rem; color: rgba(255,255,255,.18); line-height: 1;
-    }
-    .quote-card p {
-      font-family: 'Fraunces', serif;
-      font-size: 1.25rem; line-height: 1.5; margin: 0 0 1rem;
-    }
-    .quote-card footer { color: rgba(255,255,255,.8); font-size: .9rem; }
-
-    /* CTA */
-    .cta {
-      padding: clamp(3rem, 7vw, 6rem) 0;
-      background:
-        radial-gradient(600px 400px at 90% 0%, rgba(255,214,107,.25), transparent 60%),
-        linear-gradient(135deg, #3f5b2a, #2e3d20);
-      color: #fff;
-    }
-    .cta h2 { color: #fff; }
-    .cta p  { color: rgba(255,255,255,.85); }
-    .cta-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: center;
-    }
-    .contact-info {
-      list-style: none; padding: 0; margin: 1.2rem 0 0;
-    }
-    .contact-info li { margin: .5rem 0; color: rgba(255,255,255,.9); }
-    .contact-info a { color: var(--yellow-300); }
-    .contact-info a:hover { color: #fff; }
-    .contact-form {
-      background: #fff;
-      color: var(--text);
-      padding: 1.8rem;
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-    .contact-form h3 { grid-column: 1 / -1; margin: 0; }
-    .contact-form label { display: flex; flex-direction: column; gap: .35rem; font-weight: 600; font-size: .9rem; }
-    .contact-form label.full { grid-column: 1 / -1; }
-    .contact-form input,
-    .contact-form select,
-    .contact-form textarea {
-      font: inherit; padding: .7rem .9rem;
-      border: 1.5px solid var(--border);
-      border-radius: 12px;
-      background: #fdfaf1;
-      transition: border-color .2s;
-    }
-    .contact-form input:focus,
-    .contact-form select:focus,
-    .contact-form textarea:focus {
-      outline: none; border-color: var(--green-500);
-      background: #fff;
-    }
-    .contact-form button { grid-column: 1 / -1; }
-    .form-success {
-      grid-column: 1 / -1; margin: 0;
-      background: var(--green-100); color: var(--green-900);
-      padding: .8rem 1rem; border-radius: 12px; font-weight: 600;
-    }
-
-    /* Footer */
-    .site-footer {
-      background: #1f2a16;
-      color: #cfd2c4;
-      padding: 3rem 0 1.5rem;
-    }
-    .site-footer .brand-name { color: #fff; }
-    .site-footer .brand-tag  { color: #a8ad99; }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.4fr 1fr 1fr 1fr;
-      gap: 2rem;
-      padding-bottom: 2rem;
-      border-bottom: 1px solid rgba(255,255,255,.08);
-    }
-    .site-footer h5 {
-      color: #fff; font-family: 'Fraunces', serif; font-size: 1rem;
-      margin: 0 0 .8rem;
-    }
-    .site-footer ul { list-style: none; padding: 0; margin: 0; }
-    .site-footer ul li { margin: .35rem 0; }
-    .site-footer a { color: #cfd2c4; }
-    .site-footer a:hover { color: var(--yellow-300); }
-    .site-footer .muted { color: #a8ad99; }
-    .footer-bottom { padding-top: 1.3rem; color: #a8ad99; }
-
-    /* Responsive */
-    @media (max-width: 980px) {
-      .hero-grid,
-      .two-col,
-      .cta-grid { grid-template-columns: 1fr; }
-      .two-col.reverse .col-art { order: 0; }
-      .hero-art { aspect-ratio: 4/3.4; max-width: 560px; margin-inline: auto; width: 100%; }
-      .feature-grid { grid-template-columns: repeat(2, 1fr); }
-      .program-grid { grid-template-columns: 1fr; }
-      .why-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-      .nav-toggle { display: inline-flex; }
-      .site-nav ul {
-        position: absolute; top: 100%; right: 4%; left: 4%;
-        background: #fff; flex-direction: column; gap: .25rem;
-        padding: 1rem; border-radius: var(--radius);
-        box-shadow: var(--shadow);
-        display: none;
-      }
-      .site-nav ul.open { display: flex; }
-      .site-nav ul li { width: 100%; }
-      .site-nav ul a { display: block; padding: .65rem .8rem; border-radius: 10px; }
-      .site-nav ul a:hover { background: var(--green-100); }
-    }
-    @media (max-width: 640px) {
-      .schedule li { grid-template-columns: 1fr; gap: .35rem; }
-      .gallery-grid { grid-template-columns: 1fr; }
-      .contact-form { grid-template-columns: 1fr; padding: 1.4rem; }
-      .feature-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; }
-      .hero-trust { gap: 1.2rem; }
-    }
-  </style>
+    section { padding: 70px 20px; }
+    .story-grid, .visit-grid { grid-template-columns: 1fr; gap: 50px; }
+    .story-image::after { font-size: 120px; }
+    .values-grid { grid-template-columns: repeat(2, 1fr); }
+    .menu-grid { grid-template-columns: 1fr; gap: 0; }
+    .dishes-grid { grid-template-columns: 1fr; }
+    .loc-grid { grid-template-columns: repeat(2, 1fr); }
+    .foot-grid { grid-template-columns: 1fr 1fr; gap: 35px; }
+    .hours-card { padding: 30px 22px; }
+    .top-strip span { display: block; margin: 2px 0; }
+  }
+  @media (max-width: 540px) {
+    .values-grid, .loc-grid, .foot-grid { grid-template-columns: 1fr; }
+    .menu-tabs { gap: 0; }
+    .menu-tab { padding: 14px 12px; font-size: 11px; letter-spacing: 1.5px; }
+    .hero { min-height: 90vh; }
+  }
+</style>
 </head>
 <body>
 
-  <!-- Top Navigation -->
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="#top" aria-label="Smiling Sprouts home">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 64 64" width="40" height="40">
-            <circle cx="32" cy="32" r="30" fill="#FFD66B"/>
-            <path d="M20 36c3 5 9 8 12 8s9-3 12-8" stroke="#3B4A2A" stroke-width="3" stroke-linecap="round" fill="none"/>
-            <circle cx="24" cy="28" r="2.5" fill="#3B4A2A"/>
-            <circle cx="40" cy="28" r="2.5" fill="#3B4A2A"/>
-            <path d="M32 18c-2-6 4-10 8-6-4 2-4 5-3 8-2-1-4-1-5-2z" fill="#74B266"/>
-          </svg>
-        </span>
-        <span class="brand-text">
-          <span class="brand-name">Smiling Sprouts</span>
-          <span class="brand-tag">Daycare &amp; Learning</span>
-        </span>
-      </a>
+<!-- TOP STRIP -->
+<div class="top-strip">
+  <span>500 Bellevue Way NE, Suite 212</span>
+  <span>(425) 505-2247</span>
+  <span>Oyster Bar &middot; 100% Sustainable</span>
+</div>
 
-      <nav class="site-nav" aria-label="Primary">
-        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">
-          <span></span><span></span><span></span>
-          <span class="sr-only">Menu</span>
-        </button>
-        <ul id="primary-menu">
-          <li><a href="#about">About</a></li>
-          <li><a href="#programs">Programs</a></li>
-          <li><a href="#schedule">Daily Schedule</a></li>
-          <li><a href="#gallery">Our Space</a></li>
-          <li><a href="#why">Why Us</a></li>
-          <li><a href="#contact" class="btn btn-primary btn-small">Contact</a></li>
-        </ul>
-      </nav>
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="logo">Duke's <span>Seafood</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#story">Story</a></li>
+      <li><a href="#menus">Menus</a></li>
+      <li><a href="#dishes">Signature</a></li>
+      <li><a href="#visit">Visit</a></li>
+      <li><a href="#locations">Locations</a></li>
+      <li><a href="#" class="btn-reserve">Reserve</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Bellevue &middot; Lincoln Square</p>
+    <h1>
+      Wild. Sustainable.<br/>
+      <em><span class="rotator" id="rotator">
+        <span class="rotator-spacer">Award&#8209;winning.</span>
+        <span class="word active">Unforgettable.</span>
+        <span class="word">Sensational.</span>
+        <span class="word">Award-winning.</span>
+        <span class="word">Local.</span>
+        <span class="word">Yours.</span>
+      </span></em>
+    </h1>
+    <p class="hero-sub">A Bellevue tradition for over 40 years &mdash; sustainably sourced seafood, hand-crafted Duketails, and a downtown view to remember.</p>
+    <div class="hero-cta">
+      <a href="#" class="btn primary">Reserve a Table</a>
+      <a href="#menus" class="btn">Explore the Menu</a>
     </div>
-  </header>
+  </div>
+  <div class="scroll-hint">Scroll &nbsp; &darr;</div>
+</header>
 
-  <!-- Hero -->
-  <section class="hero" id="top">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <span class="eyebrow">Now Enrolling — Limited Spots</span>
-        <h1>A joyful place where little ones <span class="accent">grow, play, and bloom</span>.</h1>
-        <p class="lead">
-          At Smiling Sprouts, we provide a warm, safe, and nurturing home-away-from-home for your child.
-          Our caring teachers, playful curriculum, and bright learning spaces help every sprout thrive.
-        </p>
-        <div class="hero-cta">
-          <a href="#contact" class="btn btn-primary">Schedule a Visit</a>
-          <a href="#programs" class="btn btn-ghost">Explore Programs</a>
-        </div>
-        <ul class="hero-trust">
-          <li><strong>Licensed</strong><span>&amp; Insured</span></li>
-          <li><strong>Small</strong><span>Group Sizes</span></li>
-          <li><strong>Healthy</strong><span>Meals &amp; Snacks</span></li>
-        </ul>
+<!-- STORY -->
+<section class="story" id="story">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-image reveal">
+        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=1200&q=80" alt="Duke's Seafood plated salmon" />
+        <div class="story-badge">Established 1976</div>
       </div>
-
-      <div class="hero-art" aria-hidden="true">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="hero-image">
-          <img src="images/hero-playroom.jpg" alt="Bright, welcoming Smiling Sprouts playroom" onerror="this.style.display='none'"/>
-          <div class="image-placeholder">Add hero image as<br/><code>images/hero-playroom.jpg</code></div>
-        </div>
-        <div class="floating-badge badge-stars">
-          <span aria-hidden="true">★★★★★</span>
-          <small>Loved by Local Families</small>
-        </div>
-        <div class="floating-badge badge-ages">
-          <strong>Ages 1 – 5</strong>
-          <small>Toddler &amp; Preschool</small>
-        </div>
+      <div class="story-text">
+        <p class="eyebrow reveal">Our story</p>
+        <h2 class="section-title reveal reveal-delay-1">A downtown Bellevue <em>tradition</em>.</h2>
+        <p class="lead reveal reveal-delay-2">Perched on the second floor of Lincoln Square South &mdash; with sweeping views of Bellevue Way &mdash; Duke's has been pouring drinks, shucking oysters, and serving the Northwest's finest wild seafood for over four decades.</p>
+        <p class="reveal reveal-delay-3">Our commitment is simple: 100% sustainable, antibiotic-free, wild-caught seafood, paired with grass-fed Royal Ranch beef and produce from growers we trust. From our award-winning chowder to Chef Bill's seasonal specials, every plate is crafted with intention.</p>
+        <p class="reveal reveal-delay-3">Pull up to the oyster bar, gather the table for a birthday, or duck in for happy hour. You'll leave promising yourself you'll be back soon.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Feature Strip -->
-  <section class="feature-strip">
-    <div class="container feature-grid">
-      <div class="feature">
-        <div class="feature-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5.5-7 10-7 10-1 .5-3 .5-4 0z" fill="#E26A6A"/></svg>
-        </div>
-        <h3>Warm &amp; Loving Care</h3>
-        <p>Every child is greeted with a smile and treated like family.</p>
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Wild Alaska Salmon <span class="dot">&#9670;</span> Award-Winning Chowder <span class="dot">&#9670;</span> Willapa Bay Oysters <span class="dot">&#9670;</span> Grass-Fed Burgers <span class="dot">&#9670;</span> Hand-Crafted Duketails <span class="dot">&#9670;</span> 100% Sustainable <span class="dot">&#9670;</span></span>
+    <span>Wild Alaska Salmon <span class="dot">&#9670;</span> Award-Winning Chowder <span class="dot">&#9670;</span> Willapa Bay Oysters <span class="dot">&#9670;</span> Grass-Fed Burgers <span class="dot">&#9670;</span> Hand-Crafted Duketails <span class="dot">&#9670;</span> 100% Sustainable <span class="dot">&#9670;</span></span>
+  </div>
+</div>
+
+<!-- VALUES -->
+<section class="values">
+  <div class="container section-head-center">
+    <p class="eyebrow reveal">What sets us apart</p>
+    <h2 class="section-title reveal reveal-delay-1">Built on <em>integrity</em>, served with care.</h2>
+    <p class="section-intro reveal reveal-delay-2">Four pillars guide everything we do &mdash; from the boats we buy from to the table we set for you.</p>
+    <div class="values-grid">
+      <div class="value-card reveal">
+        <div class="value-icon">&#9728;</div>
+        <h3>100% Sustainable</h3>
+        <p>Antibiotic-free, wild-caught fish from fisheries we trust &mdash; never farmed shortcuts.</p>
       </div>
-      <div class="feature">
-        <div class="feature-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z" fill="#74B266"/></svg>
-        </div>
-        <h3>A Safe Home Setting</h3>
-        <p>Clean, secure, and child-proofed spaces designed for little explorers.</p>
+      <div class="value-card reveal reveal-delay-1">
+        <div class="value-icon">&#10047;</div>
+        <h3>Local &amp; Grass-Fed</h3>
+        <p>Royal Ranch grass-fed beef, organic chicken, and Northwest produce at the heart of every plate.</p>
       </div>
-      <div class="feature">
-        <div class="feature-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M4 4h16v14H6l-2 2z" fill="#5BA8D6"/></svg>
-        </div>
-        <h3>Play-Based Learning</h3>
-        <p>A curriculum that builds confidence, creativity, and curiosity.</p>
+      <div class="value-card reveal reveal-delay-2">
+        <div class="value-icon">&#9826;</div>
+        <h3>Hand-Crafted</h3>
+        <p>Signature Duketails, in-house infusions, and a thoughtful wine list &mdash; half-priced bottles every Monday.</p>
       </div>
-      <div class="feature">
-        <div class="feature-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M12 2l2.5 6.5L21 9l-5 4 1.5 7L12 16.8 6.5 20 8 13 3 9l6.5-.5z" fill="#F2A93B"/></svg>
-        </div>
-        <h3>Experienced Educators</h3>
-        <p>Trained, certified, and passionate about early childhood development.</p>
+      <div class="value-card reveal reveal-delay-3">
+        <div class="value-icon">&#9819;</div>
+        <h3>Award-Winning</h3>
+        <p>From "Best Crab Cake in Seattle" to four decades of devoted regulars &mdash; we've earned the trust.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- About -->
-  <section class="section" id="about">
-    <div class="container two-col">
-      <div class="col-art">
-        <div class="about-image">
-          <img src="images/about.jpg" alt="Children playing happily" onerror="this.style.display='none'"/>
-          <div class="image-placeholder small">Add <code>images/about.jpg</code></div>
-        </div>
-      </div>
-      <div class="col-copy">
-        <span class="eyebrow">About Smiling Sprouts</span>
-        <h2>Where every child blooms at their own pace.</h2>
-        <p>
-          Smiling Sprouts was founded with a simple belief: children thrive when they feel safe,
-          seen, and celebrated. Our home-based daycare blends the comfort of a cozy home with
-          the structure of an enriching learning environment.
-        </p>
-        <p>
-          From morning circle time to creative play, every part of our day is thoughtfully
-          designed to support social, emotional, physical, and cognitive growth.
-        </p>
-        <ul class="check-list">
-          <li>Nurturing, low-ratio classroom</li>
-          <li>Daily activities that build curiosity</li>
-          <li>Open communication with parents</li>
-          <li>Healthy meals &amp; snack options</li>
-        </ul>
-      </div>
+<!-- MENUS -->
+<section class="menus" id="menus">
+  <div class="container">
+    <div class="section-head-center">
+      <p class="eyebrow reveal">The menu</p>
+      <h2 class="section-title reveal reveal-delay-1">Where the <em>sea</em> meets the table.</h2>
+      <p class="section-intro reveal reveal-delay-2">Wild seafood, hand-crafted plates, and Chef Bill's seasonal specials. Choose your moment.</p>
     </div>
-  </section>
 
-  <!-- Programs -->
-  <section class="section section-soft" id="programs">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Our Programs</span>
-        <h2>Programs designed for every stage of early childhood.</h2>
-        <p class="section-sub">Each program is crafted around the developmental needs and interests of its age group, with plenty of play, learning, and laughter built into every day.</p>
-      </div>
-
-      <div class="program-grid">
-        <article class="program-card">
-          <div class="program-emoji" aria-hidden="true">🧸</div>
-          <h3>Toddlers</h3>
-          <p class="age">Ages 1 – 2</p>
-          <p>Gentle routines, sensory play, and language-building activities to support our youngest sprouts.</p>
-        </article>
-        <article class="program-card highlight">
-          <div class="program-emoji" aria-hidden="true">🎨</div>
-          <h3>Preschool</h3>
-          <p class="age">Ages 3 – 4</p>
-          <p>Creative arts, early literacy, and social play that prepare children for the next big step.</p>
-        </article>
-        <article class="program-card">
-          <div class="program-emoji" aria-hidden="true">📚</div>
-          <h3>Pre-Kindergarten</h3>
-          <p class="age">Ages 4 – 5</p>
-          <p>Kindergarten readiness with letters, numbers, problem solving, and confidence-building routines.</p>
-        </article>
-      </div>
+    <div class="menu-tabs" role="tablist">
+      <button class="menu-tab active" data-tab="dinner">Lunch &amp; Dinner</button>
+      <button class="menu-tab" data-tab="specials">Chef Bill's Specials</button>
+      <button class="menu-tab" data-tab="happy">Happy Hour</button>
+      <button class="menu-tab" data-tab="dessert">Dessert</button>
+      <button class="menu-tab" data-tab="kids">Kids</button>
     </div>
-  </section>
 
-  <!-- Daily Schedule -->
-  <section class="section" id="schedule">
-    <div class="container">
-      <div class="section-head center">
-        <span class="eyebrow">A Day at Smiling Sprouts</span>
-        <h2>Daily Schedule</h2>
-        <p class="section-sub">A structured yet flexible day designed to balance learning, play, and rest so your child feels happy and secure.</p>
-      </div>
-
-      <ol class="schedule">
-        <li>
-          <div class="sched-time"><span class="clock" aria-hidden="true">🕘</span>9:00 – 10:00 AM</div>
-          <div class="sched-body">
-            <h4>Drop-off &amp; Free Playtime</h4>
-            <p>A warm welcome and gentle transition with toys and friends.</p>
+    <!-- LUNCH/DINNER -->
+    <div class="menu-panel active" id="panel-dinner">
+      <div class="menu-section">
+        <h3 class="menu-section-title">Appe-teasers &amp; Shared Plates</h3>
+        <p class="menu-section-sub">Begin with the classics that built Duke's reputation.</p>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Coconut Wild Prawns</div>
+              <div class="menu-item-price">$15.90</div>
+            </div>
+            <p class="menu-item-desc">Coconut-encrusted Wild Mexican prawns with homemade sweet chili sauce.</p>
           </div>
-        </li>
-        <li>
-          <div class="sched-time"><span class="clock" aria-hidden="true">🕙</span>10:00 – 11:00 AM</div>
-          <div class="sched-body">
-            <h4>Circle Time</h4>
-            <p>Songs, calendar, weather, and a guided learning theme of the day.</p>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Award-Winning Crab Cakes</div>
+              <div class="menu-item-price">$19.90</div>
+            </div>
+            <p class="menu-item-desc">Lots of crab, panko-crisped, served with zesty lime aioli. Best Crab Cake, Seattle 2017.</p>
           </div>
-        </li>
-        <li>
-          <div class="sched-time"><span class="clock" aria-hidden="true">🕚</span>11:00 – 11:30 AM</div>
-          <div class="sched-body">
-            <h4>Motor Skills Activity</h4>
-            <p>Movement games and exercises to build coordination and strength.</p>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Crispy Fried Local Oysters</div>
+              <div class="menu-item-price">$17.90</div>
+            </div>
+            <p class="menu-item-desc">Heirloom masa breaded Willapa Bay oysters, homemade tartar &amp; chipotle aioli.</p>
           </div>
-        </li>
-        <li>
-          <div class="sched-time"><span class="clock" aria-hidden="true">🕦</span>11:30 AM – 12:00 PM</div>
-          <div class="sched-body">
-            <h4>Book Reading &amp; Dancing Time</h4>
-            <p>Storytime adventures followed by joyful music and movement.</p>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Lobster Deviled Eggs <span class="tag">GF</span></div>
+              <div class="menu-item-price">$14.90</div>
+            </div>
+            <p class="menu-item-desc">Cage-free local eggs topped with sweet Nova Scotia lobster meat.</p>
           </div>
-        </li>
-        <li>
-          <div class="sched-time"><span class="clock" aria-hidden="true">🕛</span>12:00 – 1:00 PM</div>
-          <div class="sched-body">
-            <h4>Lunch Time</h4>
-            <p>A healthy, balanced meal shared together at the table.</p>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Oysters on the Half Shell</div>
+              <div class="menu-item-price">MKT</div>
+            </div>
+            <p class="menu-item-desc">Daily selection of West Coast oysters with mignonette &amp; cocktail sauce. Bellevue is one of three Duke's oyster bars.</p>
           </div>
-        </li>
-        <li>
-          <div class="sched-time"><span class="clock" aria-hidden="true">🕐</span>1:00 – 3:00 PM</div>
-          <div class="sched-body">
-            <h4>Nap Time</h4>
-            <p>Quiet, cozy rest to recharge little bodies and minds.</p>
-          </div>
-        </li>
-        <li>
-          <div class="sched-time"><span class="clock" aria-hidden="true">🕒</span>3:00 – 4:00 PM</div>
-          <div class="sched-body">
-            <h4>Snack Time</h4>
-            <p>A wholesome snack and friendly conversation.</p>
-          </div>
-        </li>
-        <li>
-          <div class="sched-time"><span class="clock" aria-hidden="true">🕓</span>4:00 – 5:00 PM</div>
-          <div class="sched-body">
-            <h4>Free Playtime &amp; Pickup</h4>
-            <p>Open play and a happy goodbye to family at the door.</p>
-          </div>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- Gallery -->
-  <section class="section section-soft" id="gallery">
-    <div class="container">
-      <div class="section-head center">
-        <span class="eyebrow">Take a Peek Inside</span>
-        <h2>What Our Daycare Looks Like</h2>
-        <p class="section-sub">Bright, colorful, and thoughtfully arranged — every corner is designed with children in mind.</p>
-      </div>
-
-      <div class="gallery-grid">
-        <figure class="gallery-item">
-          <img src="images/space-1.jpg" alt="Play mats and learning toys in the main room" onerror="this.style.display='none'"/>
-          <div class="image-placeholder">Add <code>images/space-1.jpg</code></div>
-          <figcaption>Sensory Play Mats</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <img src="images/space-2.jpg" alt="Main play area with table, chairs and rugs" onerror="this.style.display='none'"/>
-          <div class="image-placeholder">Add <code>images/space-2.jpg</code></div>
-          <figcaption>Main Play Area</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <img src="images/space-3.jpg" alt="Activity corner with toy tracks and craft table" onerror="this.style.display='none'"/>
-          <div class="image-placeholder">Add <code>images/space-3.jpg</code></div>
-          <figcaption>Activity Corner</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <img src="images/space-4.jpg" alt="Quiet reading nook with rug and storage" onerror="this.style.display='none'"/>
-          <div class="image-placeholder">Add <code>images/space-4.jpg</code></div>
-          <figcaption>Quiet Reading Nook</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Us -->
-  <section class="section" id="why">
-    <div class="container two-col reverse">
-      <div class="col-copy">
-        <span class="eyebrow">Why Families Choose Us</span>
-        <h2>Peace of mind for parents. A joyful day for kids.</h2>
-        <p>We know choosing a daycare is one of the biggest decisions a family can make. Here's what makes Smiling Sprouts special:</p>
-        <div class="why-grid">
-          <div class="why-item">
-            <h4>👩‍🏫 Loving Caregivers</h4>
-            <p>Caring, trained staff who treat every child like their own.</p>
-          </div>
-          <div class="why-item">
-            <h4>🏡 Cozy Home Setting</h4>
-            <p>A clean, welcoming environment that feels just like home.</p>
-          </div>
-          <div class="why-item">
-            <h4>🧩 Engaging Curriculum</h4>
-            <p>Play-based learning that grows with your child.</p>
-          </div>
-          <div class="why-item">
-            <h4>🥕 Healthy Meals</h4>
-            <p>Nutritious meals and snacks prepared with care.</p>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Smoked Salmon Spread</div>
+              <div class="menu-item-price">$13.90</div>
+            </div>
+            <p class="menu-item-desc">Wild Alaska smoked salmon, capers, red onion, grilled sourdough crostini.</p>
           </div>
         </div>
       </div>
-      <div class="col-art">
-        <div class="quote-card">
-          <p>“Smiling Sprouts feels like a second home for our daughter. She runs in every morning with the biggest smile — that says everything.”</p>
-          <footer>— A Smiling Sprouts Parent</footer>
+
+      <div class="menu-section">
+        <h3 class="menu-section-title">Champion Chowders</h3>
+        <p class="menu-section-sub">"World's Best Clam Chowder" &mdash; five-time winner. Cup, bowl, or tureen.</p>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Duke's Award-Winning Clam Chowder</div>
+              <div class="menu-item-price">$9 / $14 / $19</div>
+            </div>
+            <p class="menu-item-desc">All-natural, New England-style with nitrite-free bacon. Creamy, herby, legendary.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Grand Duchess Lobster Chowder</div>
+              <div class="menu-item-price">$11 / $16 / $22</div>
+            </div>
+            <p class="menu-item-desc">Argentinean red shrimp, sweet potatoes &amp; lobster. The grand duchess of all chowders.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Wild Salmon &amp; Cod Cioppino</div>
+              <div class="menu-item-price">$11 / $16 / $22</div>
+            </div>
+            <p class="menu-item-desc">Wild Alaska Copper River salmon and cod, simmered cioppino-style in tomato &amp; herb broth.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Bay Bridge Crab &amp; Corn</div>
+              <div class="menu-item-price">$11 / $16 / $22</div>
+            </div>
+            <p class="menu-item-desc">Sweet corn, Dungeness crab, leeks &amp; thyme in a velvety cream base.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-section">
+        <h3 class="menu-section-title">Salads &amp; Greens</h3>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Wild &amp; Bleu Blackened Salmon Salad</div>
+              <div class="menu-item-price">$36.90</div>
+            </div>
+            <p class="menu-item-desc">Blackened wild salmon, point reyes blue, candied pecans, dried cranberries, balsamic vin.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Caesar by the Sea</div>
+              <div class="menu-item-price">$18.90</div>
+            </div>
+            <p class="menu-item-desc">Hearts of romaine, parmigiano-reggiano, garlic croutons, lemon-anchovy dressing. Add salmon $14 / prawns $12.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Strawberry Fields <span class="tag">GF</span></div>
+              <div class="menu-item-price">$17.90</div>
+            </div>
+            <p class="menu-item-desc">Organic field greens, strawberries, toasted almonds, goat cheese, poppyseed dressing.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Dockside Cobb</div>
+              <div class="menu-item-price">$22.90</div>
+            </div>
+            <p class="menu-item-desc">Romaine, grilled chicken, bleu, avocado, bacon, egg, tomato, herb vinaigrette.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-section">
+        <h3 class="menu-section-title">Sandwiches &amp; Burgers</h3>
+        <p class="menu-section-sub">Served with handcut fries &mdash; swap for sweet potato fries, soup or salad.</p>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Duke's "Extra Sharp" Cheeseburger</div>
+              <div class="menu-item-price">$24.90</div>
+            </div>
+            <p class="menu-item-desc">Royal Ranch grass-fed beef, Tillamook extra sharp cheddar, lettuce, tomato, onion, brioche.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">"The Duke" Western Burger</div>
+              <div class="menu-item-price">$24.90</div>
+            </div>
+            <p class="menu-item-desc">Grass-fed beef, smoked cheddar, coffee-infused BBQ, bacon, crispy onions, arugula on brioche.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Savory Chipotle Salmon Sandwich</div>
+              <div class="menu-item-price">$34.90</div>
+            </div>
+            <p class="menu-item-desc">Grilled wild salmon, chipotle aioli, slaw, avocado, brioche bun.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Buttery Bairdi Crab Roll</div>
+              <div class="menu-item-price">MKT</div>
+            </div>
+            <p class="menu-item-desc">Sweet Bairdi crab warmed in lemon-herb butter on grilled brioche, served with cavatappi mac &amp; cheese.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-section">
+        <h3 class="menu-section-title">From the Sea</h3>
+        <p class="menu-section-sub">Wild, sustainable, and prepared with respect.</p>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Pan-Seared Wild Salmon <span class="tag">GF</span></div>
+              <div class="menu-item-price">$44.90</div>
+            </div>
+            <p class="menu-item-desc">Wild Alaska salmon, organic baby reds, seasonal vegetable, lemon-herb butter.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">It's So Dreamy Parmesan Halibut</div>
+              <div class="menu-item-price">$46.90</div>
+            </div>
+            <p class="menu-item-desc">Parmesan-crusted Alaska halibut, herbed risotto, asparagus, beurre blanc.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Fresh Basil Pesto Salmon</div>
+              <div class="menu-item-price">$42.90</div>
+            </div>
+            <p class="menu-item-desc">Wild salmon brushed in fresh basil pesto, roasted potatoes &amp; zucchini.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Wild Seafood &amp; Prawn Ravioli</div>
+              <div class="menu-item-price">$36.90</div>
+            </div>
+            <p class="menu-item-desc">Wild coho, blue cod &amp; halibut with Mexican prawns in arugula pesto cream, pumpkin mascarpone ravioli.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Unforgettable Sea Cod Tacos</div>
+              <div class="menu-item-price">$28.90</div>
+            </div>
+            <p class="menu-item-desc">Three flour tortillas, blackened or fried cod, mango salsa, chipotle slaw, lime crema.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Classic Fish &amp; Chips</div>
+              <div class="menu-item-price">$28.90</div>
+            </div>
+            <p class="menu-item-desc">Beer-battered Alaska cod, handcut fries, slaw, tartar &amp; lemon.</p>
+          </div>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- CTA / Contact -->
-  <section class="cta" id="contact">
-    <div class="container cta-grid">
-      <div>
-        <span class="eyebrow light">Get In Touch</span>
-        <h2>Come visit Smiling Sprouts.</h2>
-        <p>We'd love to show you around and answer your questions. Schedule a tour or reach out anytime — we're here for your family.</p>
-        <ul class="contact-info">
-          <li><strong>📞 Phone:</strong> <a href="tel:+14256158798">(425) 615-8798</a></li>
-          <li><strong>✉️ Email:</strong> <a href="mailto:smilingsproutsllc@gmail.com">smilingsproutsllc@gmail.com</a></li>
-          <li><strong>📍 Address:</strong> <a href="https://maps.google.com/?q=13469+196th+Ave+SE,+Monroe,+WA+98272" target="_blank" rel="noopener">13469 196th Ave SE, Monroe, WA 98272</a></li>
-          <li><strong>📷 Instagram:</strong> <a href="https://instagram.com/smilingsprouts_p" target="_blank" rel="noopener">@smilingsprouts_p</a></li>
-          <li><strong>🕘 Hours:</strong> Monday – Friday, 9:00 AM – 5:00 PM</li>
-        </ul>
-      </div>
-
-      <form class="contact-form" onsubmit="event.preventDefault(); this.querySelector('.form-success').hidden=false; this.reset();">
-        <h3>Request a Tour</h3>
-        <label>
-          <span>Parent Name</span>
-          <input type="text" name="name" required placeholder="Your full name" />
-        </label>
-        <label>
-          <span>Email</span>
-          <input type="email" name="email" required placeholder="you@example.com" />
-        </label>
-        <label>
-          <span>Phone</span>
-          <input type="tel" name="phone" placeholder="(425) 615-8798" />
-        </label>
-        <label>
-          <span>Child's Age</span>
-          <select name="age" required>
-            <option value="">Select an age</option>
-            <option>Under 1</option>
-            <option>1 – 2 years</option>
-            <option>3 – 4 years</option>
-            <option>4 – 5 years</option>
-          </select>
-        </label>
-        <label class="full">
-          <span>Message</span>
-          <textarea name="message" rows="3" placeholder="Tell us a little about your family"></textarea>
-        </label>
-        <button type="submit" class="btn btn-primary full">Request a Tour</button>
-        <p class="form-success" hidden>Thank you! We'll be in touch within one business day. 💛</p>
-      </form>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <div class="brand">
-          <span class="brand-text">
-            <span class="brand-name">Smiling Sprouts</span>
-            <span class="brand-tag">Daycare &amp; Learning</span>
-          </span>
+    <!-- SPECIALS -->
+    <div class="menu-panel" id="panel-specials">
+      <div class="menu-section">
+        <h3 class="menu-section-title">Chef Bill's Seasonal Specials</h3>
+        <p class="menu-section-sub">Hand-picked by Chef Bill &mdash; what's at peak right now in the Northwest.</p>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Lobster Deviled Eggs <span class="tag">GF</span></div>
+              <div class="menu-item-price">$14.90</div>
+            </div>
+            <p class="menu-item-desc">Cage-free local egg piled with sweet Nova Scotia lobster meat &amp; fresh herbs.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Crispy Fried Willapa Oysters</div>
+              <div class="menu-item-price">$17.90</div>
+            </div>
+            <p class="menu-item-desc">Flash-fried in heirloom masa, with homemade tartar &amp; chipotle aioli.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Autumn Harvest Salmon Salad <span class="tag">GF</span></div>
+              <div class="menu-item-price">$32.90</div>
+            </div>
+            <p class="menu-item-desc">Broiled coho with mustard-honey glaze, Cosmic Crisp apples, Tillamook cheddar, pumpkin seeds, cranberries, bacon, maple-cider dressing.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Buttery Bairdi Crab Roll</div>
+              <div class="menu-item-price">MKT</div>
+            </div>
+            <p class="menu-item-desc">Sweet Bairdi crab in lemon-herb butter on grilled brioche, with cavatappi mac &amp; cheese.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Wild Seafood &amp; Prawn Ravioli</div>
+              <div class="menu-item-price">$36.90</div>
+            </div>
+            <p class="menu-item-desc">Wild coho, cod &amp; halibut with prawns in arugula pesto cream, pumpkin mascarpone ravioli, Parm &amp; Asiago.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">"The Duke" Western Burger</div>
+              <div class="menu-item-price">$24.90</div>
+            </div>
+            <p class="menu-item-desc">Royal Ranch grass-fed beef, smoked cheddar, coffee-BBQ, bacon, crispy onions, arugula on brioche.</p>
+          </div>
         </div>
-        <p class="muted">A warm, nurturing daycare where every child grows, learns, and plays.</p>
-      </div>
-      <div>
-        <h5>Explore</h5>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#programs">Programs</a></li>
-          <li><a href="#schedule">Daily Schedule</a></li>
-          <li><a href="#gallery">Our Space</a></li>
-        </ul>
-      </div>
-      <div>
-        <h5>Visit</h5>
-        <ul>
-          <li>Mon – Fri</li>
-          <li>9:00 AM – 5:00 PM</li>
-          <li>13469 196th Ave SE</li>
-          <li>Monroe, WA 98272</li>
-        </ul>
-      </div>
-      <div>
-        <h5>Contact</h5>
-        <ul>
-          <li><a href="tel:+14256158798">(425) 615-8798</a></li>
-          <li><a href="mailto:smilingsproutsllc@gmail.com">smilingsproutsllc@gmail.com</a></li>
-          <li><a href="https://instagram.com/smilingsprouts_p" target="_blank" rel="noopener">Instagram: @smilingsprouts_p</a></li>
-        </ul>
       </div>
     </div>
-    <div class="container footer-bottom">
-      <small>© <span id="year"></span> Smiling Sprouts Daycare. All rights reserved.</small>
-    </div>
-  </footer>
 
-  <script>
-    // Mobile nav toggle
-    const navToggle = document.querySelector('.nav-toggle');
-    const navList = document.querySelector('#primary-menu');
-    if (navToggle && navList) {
-      navToggle.addEventListener('click', () => {
-        const open = navList.classList.toggle('open');
-        navToggle.setAttribute('aria-expanded', String(open));
-      });
-      navList.querySelectorAll('a').forEach(a => {
-        a.addEventListener('click', () => {
-          navList.classList.remove('open');
-          navToggle.setAttribute('aria-expanded', 'false');
-        });
-      });
-    }
-    // Year in footer
-    const yearEl = document.getElementById('year');
-    if (yearEl) yearEl.textContent = new Date().getFullYear();
-  </script>
+    <!-- HAPPY HOUR -->
+    <div class="menu-panel" id="panel-happy">
+      <div class="menu-section">
+        <h3 class="menu-section-title">Happy Hour Bites</h3>
+        <p class="menu-section-sub">3&ndash;6 PM &amp; 9 PM&ndash;close, every day. Same portions. Same quality. Better prices.</p>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Half-Pound Cheeseburger &amp; Fries</div>
+              <div class="menu-item-price">$11.90</div>
+            </div>
+            <p class="menu-item-desc">Royal Ranch grass-fed beef, sharp cheddar, brioche, handcut fries.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Coconut Prawns</div>
+              <div class="menu-item-price">$9.90</div>
+            </div>
+            <p class="menu-item-desc">Crispy coconut prawns, sweet chili glaze.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">HH Crab Cake</div>
+              <div class="menu-item-price">$10.90</div>
+            </div>
+            <p class="menu-item-desc">Our signature crab cake, lime aioli, mixed greens.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Award-Winning Chowder Cup</div>
+              <div class="menu-item-price">$6.90</div>
+            </div>
+            <p class="menu-item-desc">A cup of our world-famous New England clam chowder.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Fish Tacos (2)</div>
+              <div class="menu-item-price">$11.90</div>
+            </div>
+            <p class="menu-item-desc">Blackened or fried cod, mango salsa, chipotle slaw.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Oysters on the Half Shell</div>
+              <div class="menu-item-price">$2.50 ea</div>
+            </div>
+            <p class="menu-item-desc">Fresh-shucked daily, mignonette &amp; cocktail sauce.</p>
+          </div>
+        </div>
+      </div>
+      <div class="menu-section">
+        <h3 class="menu-section-title">Duketails &amp; Drinks</h3>
+        <p class="menu-section-sub">$3 off our signature cocktails during all happy hours.</p>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Duke's Famous Bloody Mary</div>
+              <div class="menu-item-price">$3 OFF</div>
+            </div>
+            <p class="menu-item-desc">House-infused vodka, Duke's signature mix, the works.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Cucumber Mojito</div>
+              <div class="menu-item-price">$3 OFF</div>
+            </div>
+            <p class="menu-item-desc">Cucumber-mint infusion, white rum, lime, soda.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">In-House Infusions</div>
+              <div class="menu-item-price">$3 OFF</div>
+            </div>
+            <p class="menu-item-desc">Rotating seasonal infusions, made on the bar in-house.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Marvelous Margs</div>
+              <div class="menu-item-price">$3 OFF</div>
+            </div>
+            <p class="menu-item-desc">Classic, spicy, or seasonal &mdash; all hand-shaken.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Wines by the Glass</div>
+              <div class="menu-item-price">From $8</div>
+            </div>
+            <p class="menu-item-desc">Curated PNW &amp; international glass pours. Half-priced bottles every Monday.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Local Drafts &amp; Bubbles</div>
+              <div class="menu-item-price">From $6</div>
+            </div>
+            <p class="menu-item-desc">Northwest brews on tap, plus sparkling by the glass.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESSERT -->
+    <div class="menu-panel" id="panel-dessert">
+      <div class="menu-section">
+        <h3 class="menu-section-title">Sweet Endings</h3>
+        <p class="menu-section-sub">Save room &mdash; we made these to share. Or don't.</p>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Warm Brookie</div>
+              <div class="menu-item-price">$11.90</div>
+            </div>
+            <p class="menu-item-desc">Brownie &amp; cookie baked together, served warm with Lopez Island Creamery vanilla ice cream.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Marionberry Pie &Agrave; La Mode</div>
+              <div class="menu-item-price">$12.90</div>
+            </div>
+            <p class="menu-item-desc">Warm marionberry pie with two scoops of Lopez Island Creamery vanilla.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Mile-High Mud Pie</div>
+              <div class="menu-item-price">$12.90</div>
+            </div>
+            <p class="menu-item-desc">Chocolate &amp; espresso ice cream in a cookie crust, chocolate sauce, whipped cream, toasted almonds.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Raspberry Cream Cake</div>
+              <div class="menu-item-price">$11.90</div>
+            </div>
+            <p class="menu-item-desc">Layered raspberry cake, cream cheese frosting, raspberry coulis.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- KIDS -->
+    <div class="menu-panel" id="panel-kids">
+      <div class="menu-section">
+        <h3 class="menu-section-title">Little Mates (12 &amp; Under)</h3>
+        <p class="menu-section-sub">Wholesome, kid-approved &mdash; served with a choice of side &amp; ice cream for $2.90 more.</p>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Coco Loco Wild Prawns</div>
+              <div class="menu-item-price">$12.90</div>
+            </div>
+            <p class="menu-item-desc">Coconut-crusted prawns with sweet chili dipping sauce.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Finger Lickin' Chicken Strips</div>
+              <div class="menu-item-price">$12.90</div>
+            </div>
+            <p class="menu-item-desc">Crispy organic chicken strips with honey-mustard or ranch.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Grilled Organic Chicken Breast</div>
+              <div class="menu-item-price">$11.90</div>
+            </div>
+            <p class="menu-item-desc">Simple, juicy, grilled to perfection.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Grilled Wild Coho Salmon</div>
+              <div class="menu-item-price">$16.90</div>
+            </div>
+            <p class="menu-item-desc">A kid-sized portion of our signature wild salmon.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Luigi's Linguini</div>
+              <div class="menu-item-price">$10.90</div>
+            </div>
+            <p class="menu-item-desc">Linguini with tomato or alfredo sauce.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Oh My Cod! Fish &amp; Chips</div>
+              <div class="menu-item-price">$14.90</div>
+            </div>
+            <p class="menu-item-desc">One piece of beer-battered Alaska cod with fries.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Royal Ranch Cheeseburger</div>
+              <div class="menu-item-price">$13.90</div>
+            </div>
+            <p class="menu-item-desc">Grass-fed mini cheeseburger with fries.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-head">
+              <div class="menu-item-name">Sensational Salmon Bites</div>
+              <div class="menu-item-price">$13.90</div>
+            </div>
+            <p class="menu-item-desc">Bite-sized grilled wild salmon, easy to love.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POPULAR DISHES -->
+<section class="popular" id="dishes">
+  <div class="container">
+    <div class="section-head-center">
+      <p class="eyebrow reveal">Signature plates</p>
+      <h2 class="section-title reveal reveal-delay-1">The dishes <em>we're known for</em>.</h2>
+    </div>
+    <div class="dishes-grid">
+      <div class="dish reveal">
+        <img src="https://images.unsplash.com/photo-1611599537845-1c7aca0091c0?w=900&q=80" alt="Cod tacos" />
+        <div class="dish-info">
+          <span class="dish-tag">Customer favorite</span>
+          <div class="dish-name">Unforgettable Cod Tacos</div>
+          <p class="dish-desc">Blackened or beer-battered cod, mango salsa, chipotle slaw, lime crema on warm flour tortillas.</p>
+        </div>
+      </div>
+      <div class="dish reveal reveal-delay-1">
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=900&q=80" alt="Cheeseburger" />
+        <div class="dish-info">
+          <span class="dish-tag">The Duke</span>
+          <div class="dish-name">"Extra Sharp" Cheeseburger</div>
+          <p class="dish-desc">Royal Ranch grass-fed beef, Tillamook extra sharp cheddar, bacon, lettuce, tomato, onion on brioche.</p>
+        </div>
+      </div>
+      <div class="dish reveal reveal-delay-2">
+        <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=900&q=80" alt="Wild salmon" />
+        <div class="dish-info">
+          <span class="dish-tag">Chef's pride</span>
+          <div class="dish-name">Wild Alaska Salmon</div>
+          <p class="dish-desc">Wild salmon with seasonal cherries, asparagus &amp; roasted potatoes &mdash; 100% sustainable, always.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="quote">
+  <div class="container">
+    <blockquote class="fade-words" id="gmQuote">
+      <span class="fw">Join</span>
+      <span class="fw">us</span>
+      <span class="fw">at</span>
+      <span class="fw">Duke's</span>
+      <span class="fw">&mdash;</span>
+      <span class="fw">memorable</span>
+      <span class="fw">moments,</span>
+      <span class="fw">unforgettable&nbsp;food.</span>
+    </blockquote>
+    <p style="font-family:var(--serif);font-style:italic;font-size:20px;max-width:800px;margin:0 auto 30px;opacity:.85;">Hand-crafted Duketails, an oyster bar, 100% sustainable seafood, and friendly, unpretentious service that will make you want to come back for more.</p>
+    <cite>&mdash; Chris Gillman, General Manager</cite>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="visit" id="visit">
+  <div class="container">
+    <div class="visit-grid">
+      <div class="visit-info">
+        <p class="eyebrow reveal" style="color:var(--gold-soft);">Plan your visit</p>
+        <h2 class="section-title reveal reveal-delay-1">Find us at <em>Lincoln Square South</em>.</h2>
+        <p class="reveal reveal-delay-2">500 Bellevue Way NE, Suite 212<br/>Bellevue, WA 98004</p>
+        <p class="reveal reveal-delay-2">Phone &middot; (425) 505-2247<br/>Email &middot; chris@dukesseafood.com</p>
+        <p class="reveal reveal-delay-3" style="margin-top:30px;">Located on the second floor of Lincoln Square, across from Bellevue Square. Six levels of covered parking off 105th &amp; 4th Ave &mdash; three hours validated.</p>
+        <div style="margin-top:36px;display:flex;gap:14px;flex-wrap:wrap;">
+          <a href="#" class="btn primary">Reserve a Table</a>
+          <a href="#" class="btn" style="color:#fff;">Order Online</a>
+        </div>
+      </div>
+      <div class="hours-card reveal reveal-delay-2">
+        <h3 class="hours-title">We're open every day.</h3>
+        <div class="hours-row"><strong>Sun &ndash; Thu</strong><span>Lunch 11a&ndash;3p &middot; Dinner 3p&ndash;11p</span></div>
+        <div class="hours-row"><strong>Fri &ndash; Sat</strong><span>Lunch 11a&ndash;3p &middot; Dinner 3p&ndash;11p</span></div>
+        <div class="hours-row"><strong>Brunch Sat &amp; Sun</strong><span>11a&ndash;3p</span></div>
+        <div class="hours-row"><strong>Late-Night</strong><span>Daily until close</span></div>
+        <div class="happy-hour-highlight">
+          <strong>Happy Hour 3&ndash;6p &amp; 9p&ndash;Close</strong>
+          <span>Seven days a week</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATIONS -->
+<section class="locations" id="locations">
+  <div class="container">
+    <div class="section-head-center">
+      <p class="eyebrow reveal">All locations</p>
+      <h2 class="section-title reveal reveal-delay-1">Seven shores. <em>One family.</em></h2>
+      <p class="section-intro reveal reveal-delay-2">Find a Duke's wherever the Puget Sound takes you.</p>
+    </div>
+    <div class="loc-grid">
+      <div class="loc featured reveal">
+        <span class="loc-tag">You are here</span>
+        <div class="loc-city">Bellevue</div>
+        <div class="loc-detail">Lincoln Square South<br/>500 Bellevue Way NE</div>
+      </div>
+      <div class="loc reveal reveal-delay-1">
+        <span class="loc-tag">Lakeside</span>
+        <div class="loc-city">Green Lake</div>
+        <div class="loc-detail">Seattle, WA</div>
+      </div>
+      <div class="loc reveal reveal-delay-2">
+        <span class="loc-tag">Oyster bar</span>
+        <div class="loc-city">South Lake Union</div>
+        <div class="loc-detail">Seattle, WA</div>
+      </div>
+      <div class="loc reveal reveal-delay-3">
+        <span class="loc-tag">Waterfront</span>
+        <div class="loc-city">Tacoma</div>
+        <div class="loc-detail">Tacoma, WA</div>
+      </div>
+      <div class="loc reveal">
+        <span class="loc-tag">Mall-side</span>
+        <div class="loc-city">Westfield Southcenter</div>
+        <div class="loc-detail">Tukwila, WA</div>
+      </div>
+      <div class="loc reveal reveal-delay-1">
+        <span class="loc-tag">South sound</span>
+        <div class="loc-city">Kent Station</div>
+        <div class="loc-detail">Kent, WA</div>
+      </div>
+      <div class="loc reveal reveal-delay-2">
+        <span class="loc-tag">Oyster bar</span>
+        <div class="loc-city">West Seattle</div>
+        <div class="loc-detail">Alki Beach</div>
+      </div>
+      <div class="loc reveal reveal-delay-3" style="background:linear-gradient(135deg,var(--gold) 0%,var(--gold-soft) 100%);color:var(--navy);">
+        <span class="loc-tag" style="color:var(--navy);">Private events</span>
+        <div class="loc-city" style="color:var(--navy);">Dockside Event Space</div>
+        <div class="loc-detail" style="color:var(--navy);opacity:.8;">Book your celebration</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-strip">
+  <div class="container">
+    <h2>Half-priced bottles. Every Monday.</h2>
+    <p>Local &amp; international wines, half off all night long. Bring friends. We'll bring the chowder.</p>
+    <a href="#" class="btn">Reserve a Table</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-grid">
+    <div class="foot">
+      <div class="foot-logo">Duke's <span>Seafood</span></div>
+      <p>500 Bellevue Way NE, Suite 212<br/>Bellevue, WA 98004</p>
+      <p>(425) 505-2247<br/>chris@dukesseafood.com</p>
+      <p style="margin-top:18px;font-family:var(--script);font-size:22px;color:var(--gold-soft);">Wild. Sustainable. Yours.</p>
+    </div>
+    <div class="foot">
+      <h4>Menus</h4>
+      <ul>
+        <li><a href="#menus">Lunch &amp; Dinner</a></li>
+        <li><a href="#menus">Chef Bill's Specials</a></li>
+        <li><a href="#menus">Happy Hour</a></li>
+        <li><a href="#menus">Dessert</a></li>
+        <li><a href="#menus">Kids</a></li>
+        <li><a href="#">Wine List</a></li>
+      </ul>
+    </div>
+    <div class="foot">
+      <h4>Visit</h4>
+      <ul>
+        <li><a href="#">Reservations</a></li>
+        <li><a href="#">Online Order</a></li>
+        <li><a href="#">Gift Cards</a></li>
+        <li><a href="#">Dockside Events</a></li>
+        <li><a href="#">Private Dining</a></li>
+        <li><a href="#">Frozen Chowders</a></li>
+      </ul>
+    </div>
+    <div class="foot">
+      <h4>Duke's</h4>
+      <ul>
+        <li><a href="#">Our Story</a></li>
+        <li><a href="#">Blog &amp; Recipes</a></li>
+        <li><a href="#">Saving Salmon</a></li>
+        <li><a href="#">Newsroom</a></li>
+        <li><a href="#">Work at Duke's</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="copyright">&copy; 2014&ndash;2026 Duke's Seafood &middot; All Rights Reserved &middot; Privacy Policy &middot; Terms &middot; A proud supporter of the Alaska Seafood Marketing Institute</p>
+</footer>
+
+<script>
+  /* ---------- Rotating words ---------- */
+  (function rotator() {
+    const words = document.querySelectorAll('#rotator .word');
+    if (!words.length) return;
+    let i = 0;
+    setInterval(() => {
+      words[i].classList.remove('active');
+      i = (i + 1) % words.length;
+      words[i].classList.add('active');
+    }, 2400);
+  })();
+
+  /* ---------- Sticky nav scrolled state ---------- */
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 80) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
+
+  /* ---------- Mobile nav toggle ---------- */
+  document.getElementById('navToggle').addEventListener('click', () => {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+  document.querySelectorAll('#navLinks a').forEach(a =>
+    a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'))
+  );
+
+  /* ---------- Menu tabs ---------- */
+  document.querySelectorAll('.menu-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.tab;
+      document.querySelectorAll('.menu-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.menu-panel').forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById('panel-' + target).classList.add('active');
+    });
+  });
+
+  /* ---------- Reveal on scroll ---------- */
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  document.querySelectorAll('.reveal, .fade-words').forEach(el => io.observe(el));
+</script>
+
 </body>
 </html>
