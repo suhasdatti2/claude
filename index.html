@@ -857,7 +857,11 @@
         </ul>
       </div>
 
-      <form class="contact-form" onsubmit="event.preventDefault(); this.querySelector('.form-success').hidden=false; this.reset();">
+      <form class="contact-form" name="tour-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleTourSubmit(event)">
+        <input type="hidden" name="form-name" value="tour-request" />
+        <p class="hidden-bot" style="display:none;">
+          <label>Don't fill this out: <input name="bot-field" /></label>
+        </p>
         <h3>Request a Tour</h3>
         <label>
           <span>Parent Name</span>
@@ -953,6 +957,25 @@
     // Year in footer
     const yearEl = document.getElementById('year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    // Submit the tour-request form to Netlify Forms without leaving the page
+    function handleTourSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      const data = new FormData(form);
+      const body = new URLSearchParams(data).toString();
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body
+      }).then(() => {
+        const ok = form.querySelector('.form-success');
+        if (ok) ok.hidden = false;
+        form.reset();
+      }).catch(() => {
+        alert("Sorry — couldn't send your message. Please email smilingsproutsllc@gmail.com instead.");
+      });
+    }
   </script>
 </body>
 </html>
